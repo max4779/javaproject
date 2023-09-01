@@ -2,4 +2,4 @@
 
 1번 실행결과
 
-<img src "https://github.com/max4779/javaproject/blob/master/screenshot/result.PNG" width "60%">
+<img src= "https://github.com/max4779/javaproject/blob/master/screenshot/result.PNG" width "60%">
