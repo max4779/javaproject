@@ -27,6 +27,6 @@ public class student {
 
     @Override
     public String toString() {
-        return "student"+first+" "+second;
+        return "student : "+first+" "+second;
     }
 }
