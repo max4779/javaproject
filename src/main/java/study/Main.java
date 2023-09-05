@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         boolean stop=true;
         Scanner number;
-        int menuNumber;
+        String menuNumber;
 
         System.out.printf("*** 영단어 마스터 ***\n");
 
@@ -21,14 +21,14 @@ public class Main {
             System.out.println("********************\n");
             System.out.println("=> 원하는 메뉴는?");
             number=new Scanner(System.in);
-            menuNumber=number.next;
+            menuNumber = number.next();
+
             switch(menuNumber){
-                case 1:
+                case "1":
 
             }
         }
 
-        switch()
 
     }
 }
