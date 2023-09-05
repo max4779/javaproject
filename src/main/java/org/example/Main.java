@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.printf("Hello and welcome!\n");
 
-        student s1= new student("1234","name");
+        student s1= new student("12345","name");
 
         System.out.println(s1.toString());
         }
