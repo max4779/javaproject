@@ -82,7 +82,7 @@ public class wordCRUD implements ICRUD{
         System.out.println("=> 정말로 삭제하시겠습니까? (Y/N) ");
         String ans = scan.next();
         if(ans.equalsIgnoreCase("y") || ans.equalsIgnoreCase("Y")){
-            list.remove(updateList.get(number-1));
+            list.remove((int)updateList.get(number-1));
             System.out.println("단어가 삭제되었습니다. ");
         }
         else{
