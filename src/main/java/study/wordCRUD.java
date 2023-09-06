@@ -86,7 +86,7 @@ public class wordCRUD implements ICRUD{
             System.out.println("단어가 삭제되었습니다. ");
         }
         else{
-            System.out.println("취소되었습니다. ");
+            System.out.println("취소되었습니다.");
         }
     }
 
