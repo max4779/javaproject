@@ -27,7 +27,7 @@ public class wordManager {
             }
 
             else if(menuNumber==6){
-                WordCRUD.addWord();
+                WordCRUD.Delete();
             }
         }
     }
