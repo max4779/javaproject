@@ -10,7 +10,6 @@ public class wordManager {
     public void start(){
         while(true) {
             int menuNumber = menu();
-            System.out.println(menuNumber);
 
             if(menuNumber==0) break;
 
