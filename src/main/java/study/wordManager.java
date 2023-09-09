@@ -8,6 +8,7 @@ public class wordManager {
         WordCRUD = new wordCRUD(scan);
     }
     public void start(){
+        WordCRUD.loadFile();
         while(true) {
             int menuNumber = menu();
 
@@ -15,6 +16,14 @@ public class wordManager {
 
             else if(menuNumber==1){
                 WordCRUD.viewList();
+            }
+
+            else if(menuNumber==2){
+                WordCRUD.searchLevel();
+            }
+
+            else if(menuNumber==3){
+                WordCRUD.searchWord();
             }
 
             else if(menuNumber==4){
@@ -27,6 +36,10 @@ public class wordManager {
 
             else if(menuNumber==6){
                 WordCRUD.Delete();
+            }
+
+            else if(menuNumber==7){
+                WordCRUD.saveFile();
             }
         }
     }

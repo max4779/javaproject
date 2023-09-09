@@ -63,5 +63,8 @@ public class wordData {
         this.meaning = meaning;
     }
 
+    public String toFileString(){
+        return this.level + "|" + this.word + "|" + this.meaning;
+    }
 
 }

@@ -1,9 +1,12 @@
 package study;
+import java.io.*;
+import java.nio.Buffer;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class wordCRUD implements ICRUD{
     ArrayList<wordData>list;
     Scanner scan;
+    final String fname= "Dictionary.txt";
 
     wordCRUD(Scanner scan){
      list=new ArrayList<>();
@@ -55,6 +58,27 @@ public class wordCRUD implements ICRUD{
         return updateList;
     }
 
+    public void viewList(int level){
+        int j=0;
+
+        System.out.println("==============");
+
+        for(int i=0; i<list.size();i++){
+            int ilevel=list.get(i).getLevel();
+
+            if(ilevel != level){
+                continue;
+            }
+
+            System.out.print((j+1)+ " ");
+            System.out.println(list.get(i).toString());
+            j++;
+        }
+        System.out.println("==============");
+
+    }
+
+
     public void Update(){
         System.out.println("=> 수정할 단어 검색 : ");
         String keyword=scan.next();
@@ -104,4 +128,54 @@ public class wordCRUD implements ICRUD{
     public void selectOne(int id) {
 
     }
+    public void loadFile(){
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(fname));
+            String line;
+            int count=0;
+
+            while(true) {
+                line = br.readLine();
+                if(line==null){
+                    break;
+                }
+                String data[] = line.split("\\|");
+                int level=Integer.parseInt(data[0]);
+                String word = data[1];
+                String meaning = data[2];
+                list.add(new wordData(0, level, word, meaning));
+                count++;
+            }
+            br.close();
+            System.out.println("==> " +count+"개 로딩 완료");
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+   }
+
+   public void saveFile(){
+       try {
+           PrintWriter pr =new PrintWriter(new FileWriter(fname));
+           for(wordData one : list){
+               pr.write(one.toFileString()+"\n");
+           }
+           pr.close();
+           System.out.println("==> 파일 저장 완료");
+       } catch (IOException e) {
+           throw new RuntimeException(e);
+       }
+   }
+
+   public void searchLevel(){
+        System.out.println("=> 원하는 레벨은? (1~3)");
+        int level=scan.nextInt();
+        viewList(level);
+   }
+
+   public void searchWord(){
+       System.out.println("=> 원하는 단어은?");
+       String keyword=scan.next();
+       viewList(keyword);
+   }
+
 }
