@@ -41,7 +41,6 @@ public class wordCRUD implements ICRUD{
         ArrayList<Integer> updateList=new ArrayList<>();
         int j=0;
 
-        System.out.println("=> 원하는 메뉴는? ");
 
         for(int i=0; i<list.size();i++){
             String word=list.get(i).getWord();
@@ -92,6 +91,7 @@ public class wordCRUD implements ICRUD{
         String meaning = scan.nextLine();
         wordData word=list.get(updateList.get(number-1));
         word.setMeaning(meaning);
+        System.out.println("단어가 성공적으로 수정되었습니다");
     }
 
     public void Delete(){
