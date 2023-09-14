@@ -30,7 +30,6 @@ public class wordCRUD implements ICRUD{
         System.out.println("새 단어가 단어장에 추가되었습니다.\n");
     }
     public void viewList(){
-        System.out.println("=> 원하는 메뉴는? ");
 
         for(int i=0; i<list.size();i++){
             System.out.print((i+1)+ " ");
