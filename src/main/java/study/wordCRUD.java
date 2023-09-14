@@ -27,7 +27,7 @@ public class wordCRUD implements ICRUD{
     public void addWord(){
         wordData first =(wordData)add();
         list.add(first);
-        System.out.println("새 단어가 단어장에 추가되었습니다.");
+        System.out.println("새 단어가 단어장에 추가되었습니다.\n");
     }
     public void viewList(){
         System.out.println("=> 원하는 메뉴는? ");

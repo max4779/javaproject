@@ -44,7 +44,6 @@ public class wordManager {
         }
     }
     public int menu(){
-        System.out.println("*** 영단어 마스터 ***");
         System.out.println("********************");
         System.out.println("1. 모든 단어 보기");
         System.out.println("2. 수준별 단어 보기");
