@@ -12,7 +12,10 @@ public class wordManager {
         while(true) {
             int menuNumber = menu();
 
-            if(menuNumber==0) break;
+            if(menuNumber==0) {
+                System.out.println("프로그램 종료");
+                break;
+            }
 
             else if(menuNumber==1){
                 WordCRUD.viewList();
