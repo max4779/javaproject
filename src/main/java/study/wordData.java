@@ -1,7 +1,6 @@
 package study;
 
 public class wordData {
-
     @Override
     public String toString() {
         String levelStar="";
